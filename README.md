@@ -5,8 +5,7 @@ repository contributions, and collaboration. It helps an engineering manager
 answer practical questions such as who can review a change, who has the skills
 for a project, and how two developers have worked together.
 
-> WEXA AI CognoDB take-home assignment. Built with React, Express, and the
-> official Neo4j JavaScript driver.
+
 
 ## Demo
 
