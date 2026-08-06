@@ -16,8 +16,14 @@ const server = app.listen(env.port, () => {
 try {
   await verifyDatabaseConnectivity();
   console.log('CognoDB connection verified.');
-} catch (_error) {
-  console.error('CognoDB is unavailable. Check the database configuration and status.');
+} catch (error) {
+  // Railway logs need enough context to distinguish an authentication problem
+  // from DNS, TLS, and connection timeouts. Neo4j error messages do not include
+  // the supplied password, so these two fields are safe to record server-side.
+  console.error('CognoDB connection failed.', {
+    code: error.code || 'DATABASE_CONNECTION_ERROR',
+    message: error.message,
+  });
 }
 
 // Stop accepting new requests during local restarts or hosting shutdowns.
