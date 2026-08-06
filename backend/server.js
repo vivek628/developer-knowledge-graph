@@ -7,8 +7,8 @@ import {
 
 // Keep the network listener separate from app.js. This lets future tests import
 // the Express application without opening a real port.
-const server = app.listen(env.port, () => {
-  console.log(`API is running at http://localhost:${env.port}`);
+const server = app.listen(env.port, '0.0.0.0', () => {
+  console.log(`API is listening on 0.0.0.0:${env.port}`);
 });
 
 // A database outage should not crash the HTTP process. Keeping it alive means
