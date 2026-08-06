@@ -13,9 +13,7 @@ for a project, and how two developers have worked together.
 - **API health:** `Add deployed backend URL/api/health before submission`
 - **Screen recording:** `Add recording URL before submission`
 
-## Screenshots
 
-`Add dashboard, developer profile, team builder, and graph screenshots before submission.`
 
 ## Why a graph database?
 
